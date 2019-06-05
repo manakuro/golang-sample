@@ -1,18 +1,17 @@
 package main
 
 import (
-	"encoding/json"
-	"errors"
-	"fmt"
+  "encoding/json"
+  "errors"
+  "fmt"
+  "github.com/manakuro/chitchat/data"
 
-	// 	"github.com/sausheong/gwp/Chapter_2_Go_ChitChat/chitchat/data"
-	"html/template"
-	"log"
-	"net/http"
-	"os"
-	"strings"
-
-	"github.com/manakuro/chitchat/data"
+  // 	"github.com/sausheong/gwp/Chapter_2_Go_ChitChat/chitchat/data"
+  "html/template"
+  "log"
+  "net/http"
+  "os"
+  "strings"
 )
 
 type Configuration struct {
@@ -69,6 +68,7 @@ func session(writer http.ResponseWriter, request *http.Request) (sess data.Sessi
 	}
 	return
 }
+
 
 // parse HTML templates
 // pass in a list of file names, and get a template
